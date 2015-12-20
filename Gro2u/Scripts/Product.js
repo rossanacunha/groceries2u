@@ -132,7 +132,7 @@ window.productViewModel = (function () {
     }
     sortProducts = function () {
         window.productViewModel.products.sort(function (l, r) {
-            return (l.Name() == r.Name()) ? (l.Name() > r.Name() ? 1 : -1) : (l.Name() > r.Name() ? 1 : -1)
+            return (l.Name().toLowerCase() == r.Name().toLowerCase()) ? (l.Name().toLowerCase() > r.Name().toLowerCase() ? 1 : -1) : (l.Name().toLowerCase() > r.Name().toLowerCase() ? 1 : -1)
             //return left.InternalName == right.InternalName ? 0 : (left.InternalName < right.InternalName ? -1 : 1)
         });
     }
